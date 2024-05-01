@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "react": "npm start --prefix frontend"
+    "react": "npm start --prefix frontend",
+    "both": "concurrently \"npm run dev\" \"npm run react\""
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "mongoose": "^8.3.2"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "dotenv": "^16.4.5"
   }
 }
