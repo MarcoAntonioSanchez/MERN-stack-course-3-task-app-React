@@ -1,9 +1,10 @@
-const TaskForm = () => {
+const TaskForm = ({createTask, name, handleInputChange}) => {
   return (
-    <div>
-        <h2>Task Form</h2>
-    </div>
+    <form className="task-form" onSubmit={createTask}>
+        <input type="text" placeholder="Add a task" name="name" value={name} onChange={handleInputChange} />
+        <button type="submit">Add</button>
+    </form>
   )
-}
+};
 
-export default TaskForm
+export default TaskForm;
